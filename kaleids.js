@@ -5,17 +5,12 @@ a.fft[0]
 
 // test image
 img = document.createElement('img')
-img.src = atom.project.getPaths()[0]+'/assets/pp.jpeg'
+img.src = atom.project.getPaths()[0]+'/assets/auxerreP6.jpg'
 
 s0.init({src:img})
-src(s0).rotate(0,0.2).out()
+src(s0).rotate(56,0.9).modulateKaleid(osc(11,0.5,0),50).saturate().hue(()=>(a.fft[3]/4)).out(o0)
 
-
-voronoi(5,-0.1,() => 2 + a.fft[3])
-.add(osc(1,0,1)).kaleid(21)
-.scale(1,1,2).colorama(() => 0.001 + a.fft[0]).out(o1)
-src(o1).mult(src(s0).modulateRotate(o1,100), -0.5)
-  .out(o0)
+src(s0).kaleid(50+(() => a.fft[0])).out(o0)
 
 s1.init({src: vid})
 src(s1)

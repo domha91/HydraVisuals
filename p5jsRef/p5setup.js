@@ -1,6 +1,9 @@
-
+// Note that P5 runs in instance mode, so all functions need to start with the variable where P5 was initialized (in this case p1)
+// explanation of instance mode: https://github.com/processing/P5.js/wiki/Global-and-instance-mode
 // Initialise p5
 p1 = new P5() // {width: window.innerWidth, height:window.innerHeight, mode: 'P2D'}
+
+p1 = new P5({mode: 'WEBGL' })
 
 // clear p5
 p1.clear()
@@ -17,3 +20,5 @@ s0.init({src: p1.canvas})
 p1.hide()
 
 p1.show() // show the canvas
+
+src(s0).repeat().out()

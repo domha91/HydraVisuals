@@ -40,7 +40,7 @@ osc(9,-0.1,0.1)
   .scale(0.1,0.3)
   .modulate(noise(5,0.1))
   .mult(solid(1,1,0.3))
-  .out(o0)
+    .out(o0)
 
 // modulatePixelate
 // .modulatePixelate( multiple, offset )

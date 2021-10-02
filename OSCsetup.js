@@ -1,6 +1,7 @@
 // set port to listen to osc messages. default port is 57101
 msg.setPort(57101)
 
+
 // function to convert tidal messages from an array to an object
 // run this code once
 parseTidal = (args) => {
@@ -16,16 +17,15 @@ parseTidal = (args) => {
 //
 msg.on('/play', (args) => {
 // log osc results to console
- //log(args)
  tidal = parseTidal(args)
  console.log(tidal)
+ log(tidal)
 })
 
 // EXAMPLE USING TIDAL "sd" and "bd" to control hydra
 
 // define a variable to contain a blend value
 blend = 0
-
 // receive args from supercollider in hydra. Tidal sends OSC messages
 // ahead of the time the sound is plays, so it is necessary to use setTimeout
 // in order to wait to change the visuals

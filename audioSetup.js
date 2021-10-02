@@ -15,7 +15,7 @@ a.setSmooth(0.96)
 a.setCutoff(2)
 
 // change the range of values detected
-a.setScale(3)
+a.setScale(4)
 
 // You can also individually change the cutoff and scale of each frequency range
 // change the cutoff for the first frequency band(low sounds)
